@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.4</version>
+		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fontys.ict.kwetter</groupId>
@@ -14,7 +14,7 @@
 	<name>kwetter-api-gateway</name>
 	<description>API Gateway</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>15</java.version>
 		<spring-cloud.version>2020.0.2</spring-cloud.version>
 	</properties>
 	<dependencies>
