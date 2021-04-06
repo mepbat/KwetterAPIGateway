@@ -10,18 +10,18 @@ public class SpringCloudConfig {
     @Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(r -> r.path("/credentials/**")
-                        .uri("http://localhost:8081/"))
-                .route(r -> r.path("/account/**")
-                        .uri("http://localhost:8082/"))
-                .route(r -> r.path("/follow/**")
-                        .uri("http://localhost:8082/"))
-                .route(r -> r.path("/tweet/**")
-                        .uri("http://localhost:8083/"))
-                .route(r -> r.path("/mention/**")
-                        .uri("http://localhost:8083/"))
-                .route(r -> r.path("/tag/**")
-                        .uri("http://localhost:8083/"))
+                .route("path_route", r -> r.path("/credentials/**")
+                        .uri("http://kwetter-authentication-service:8080/"))
+                .route("path_route", r -> r.path("/account/**")
+                        .uri("http://kwetter-account-service:8080/"))
+                .route("path_route", r -> r.path("/follow/**")
+                        .uri("http://kwetter-account-service:8080/"))
+                .route("path_route", r -> r.path("/tweet/**")
+                        .uri("http://kwetter-tweet-service:8080/"))
+                .route("path_route", r -> r.path("/mention/**")
+                        .uri("http://kwetter-tweet-service:8080/"))
+                .route("path_route", r -> r.path("/tag/**")
+                        .uri("http://kwetter-tweet-service:8080/"))
                 .build();
     }
 }
