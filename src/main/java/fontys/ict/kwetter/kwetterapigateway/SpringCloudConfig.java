@@ -22,6 +22,8 @@ public class SpringCloudConfig {
                         .uri("http://kwetter-tweet-service:8080/"))
                 .route("path_route", r -> r.path("/tag/**")
                         .uri("http://kwetter-tweet-service:8080/"))
+                .route("path_route", r -> r.path("/trump/**")
+                        .uri("http://kwetter-trump-service:8080/"))
                 .build();
     }
 }
